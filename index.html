@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR's Solutions</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        .navbar{
+			background: black; 
+            padding-right: 15px;
+            padding-left: 15px;
+		}
+		.navdiv{
+			display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+		}
+        li{
+			list-style: none; 
+            display: inline-block;
+            gap: 5px;
+		}
+        .logo{
+            padding-top: 15px;
+            padding-bottom: 10px;
+        }
+        button{
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: lightskyblue;
+            font-weight: bold;
+        }
+        button:hover{
+            background-color: green;
+        }
+        img{
+            background-position: center;
+            opacity: 1;
+            background-size: cover;
+            
+        }
+        
+        
+        
+        
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+		<div class="navdiv">
+			<div class="logo"><img src="./logo1.svg" alt="logo" height="50" width="90"></div>
+			<ul>
+				<li><button>HOME</button></li>
+				<li><button>ABOUT</button></li>
+				<li><button>CONTACT</button></li>
+				<li><button onclick="goforward()"><a href="./login.html">LOGIN</a></button></li>
+            </ul>
+		</div>
+	</nav>
+    <img src="./logo1.svg" alt="logo" width="1280" height="468">
+    <script>
+
+        function goforward(){
+            history.forward();
+        }
+
+
+    </script>
+    
+   
+
+</body>
+</html>
