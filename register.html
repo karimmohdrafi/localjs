@@ -133,10 +133,19 @@
         email = document.getElementById("email").value;
         psw = document.getElementById("psw").value;
 
-        localStorage.setItem("firstname",firstname);
-        localStorage.setItem("lastname",lastname);
-        localStorage.setItem("email",email);
-        localStorage.setItem("psw",psw);
+        var user_records = new Array();
+        user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+
+        user_records.push({
+            "firstname":firstname,
+            "lastname":lastname,
+            "email":email,
+            "psw":psw
+
+        })
+
+        localStorage.setItem("users",JSON.stringify(user_records));
+        
         }
 
         function home(){
